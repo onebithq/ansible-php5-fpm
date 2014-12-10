@@ -12,12 +12,12 @@ in the metadata file.
 Role Variables
 --------------
 
-A description of the settable variables for this role
-	- php_conf_pm: process control method (dynamic or static)
-	- php_conf_max_children : maximum number of child processes to be alive
-	- php_conf_start_servers : the number of children created on startup
-	- php_conf_min_spare_servers : the minimum number of children in 'idle'
-	- php_conf_max_spare_servers : the maximum number of children in 'idle'
+A description of the settable variables for this role    
+    - php_conf_pm: process control method (dynamic or static)    
+    - php_conf_max_children : maximum number of child processes to be alive    
+    - php_conf_start_servers : the number of children created on startup
+    - php_conf_min_spare_servers : the minimum number of children in 'idle'    
+    - php_conf_max_spare_servers : the maximum number of children in 'idle'    
 
 Dependencies
 ------------
