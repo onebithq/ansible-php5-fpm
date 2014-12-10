@@ -1,0 +1,8 @@
+---
+# defaults file for php5-fpm
+# 
+php_conf_pm: dynamic
+php_conf_max_children: 5
+php_conf_start_servers: 2 
+php_conf_min_spare_servers: 2
+php_conf_max_spare_servers: 4

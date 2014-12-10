@@ -1,0 +1,19 @@
+---
+# tasks file for php5-fpm
+# 
+- name: install php-fpm 
+  apt: name=php5-fpm state=present 
+
+- name: Install the required packages 
+  apt: name={{ item }} state=present update_cache=yes
+  with_items: ubuntu_pkg
+  when: ansible_os_family == "Debian"
+
+- name: start php5-fpm service
+  service: name=php5-fpm state=started enabled=yes
+
+- name: Create the configurations for php5-fpm
+  template: src=www.conf.j2 dest=/etc/php5/fpm/pool.d/www.conf
+  notify: 
+   - restart php5-fpm
+
